@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label> Your amount of euro(EUR):</label>
+    <input type="text" id="value">
+    <select>
+        <option value="eur" id="eu" name="cur">EUR</option>
+        <option value="usd" id="us" name="cur">USD</option>
+        <option value="gbp" id="brit" name="cur">GBP</option>
+        <option value="chf" id="ch" name="cur">CHF</option>
+    </select>
+    <button type="button" id="conv">convert!</button>
+    <p id="answer"> </p>
+
+
+    <script>
+        let money = document.getElementById("value");
+        let currency = document.getElementsByName("cur");
+
+        let convert = document.getElementById("conv");
+        let text = document.getElementById("answ");
+        
+
+        convert.addEventListener("click", (e) => {
+            convertMoney();
+        });
+
+
+        function convertMoney() {
+            if (currency.value == "eu") {
+                return (money + `EUR`);
+            }
+            else if (currency.value == "us") {
+                return (`${money * 1.20} USD`);
+            }
+            else if (currency.value == "brit") {
+                return (`${money / 1.15} GBP`);
+            }
+            else if (currency.value == "ch") {
+                return (`${money * 0.98} CHF`);
+            }
+        }
+
+        function giveAnswer(){
+document.g
+        }
+    
+    </script>
+</body>
+
+</html>
